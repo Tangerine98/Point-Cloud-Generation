@@ -6,7 +6,7 @@ Servo servo_base;
 //turn_time = (0.23 - 0.19) *(5-4.8)/(4.8 - 6.0) + 0.23 = 0.22333sec 0.23 is speed at 4.8V and 0.19 is speed at 6.0V
 
 int time_delay;
-int angle = 360;
+int angle = 5;
 
 // defines pins numbers
 const int trigPin = 5;
@@ -35,12 +35,12 @@ void loop() {
       findDistance();
       delay(500);
 
-      //Move Anti-Clockwise
+      /*/Move Anti-Clockwise
       servo_base.writeMicroseconds(2000);
       delay(time_delay-170);
       servo_base.writeMicroseconds(1500);
       findDistance();
-      delay(500);
+      delay(500);*/
 }
 
 void findDistance(){
