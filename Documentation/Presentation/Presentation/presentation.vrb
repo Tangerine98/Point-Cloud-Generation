@@ -1,0 +1,8 @@
+\frametitle{Completed tasks}
+\subsection{Task 4: To detect the distance of obstacles present}
+\textbf{Task 4 : To detect the distance of obstacles present}
+\begin{itemize}
+\item An ultrasonic sensor  HC-SR04 was attached to the end effector position of the arm.
+\item  The arm swept $360\degree$ in both clockwise and anti-clockwise direction.
+\item The sensor detected the distance to the obstacles around it.
+\end{itemize}
