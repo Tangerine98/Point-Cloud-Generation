@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  8 NOV 2018 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  8 NOV 2018 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,10 +638,10 @@ Package: amsthm 2017/10/31 v2.20.4
 \beamer@dimb=\dimen189
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerthememetr
-opolis.sty
+(./beamerthememetropolis.sty
 Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
- (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
@@ -649,10 +649,10 @@ Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks43
 \pgfopts@list@add@b@toks=\toks44
 )
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerinnerthem
-emetropolis.sty
+(./beamerinnerthememetropolis.sty
 Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
- (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count154
 \calc@Bcount=\count155
@@ -738,20 +738,15 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 \metropolis@blocksep=\skip63
 \metropolis@blockadjust=\skip64
 \metropolis@parskip=\skip65
-)
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerouterthem
-emetropolis.sty
+) (./beamerouterthememetropolis.sty
 Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
 \metropolis@frametitle@padding=\skip66
 \metropolis@progressinheadfoot=\skip67
 \metropolis@progressinheadfoot@linewidth=\skip68
 )
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamercolorthem
-emetropolis.sty
+(./beamercolorthememetropolis.sty
 Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
-)
-(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerfonttheme
-metropolis.sty
+) (./beamerfontthememetropolis.sty
 Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
 
 
@@ -813,7 +808,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\newline' on input line 26.
 
-No file presentation.aux.
+(./presentation.aux)
 \openout1 = `presentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -830,6 +825,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -909,6 +905,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 35.
 LaTeX Info: Redefining \pageref on input line 35.
 LaTeX Info: Redefining \nameref on input line 35.
+
+(./presentation.out) (./presentation.out)
 \@outlinefile=\write5
 \openout5 = `presentation.out'.
 
@@ -993,15 +991,13 @@ Package gensymb Warning: Not defining \micro.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-No file presentation.nav.
-
+(./presentation.nav)
 Overfull \vbox (30.63992pt too high) detected at line 39
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-No file presentation.toc.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./presentation.toc)
 [2
 
 ]
@@ -1036,7 +1032,7 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 ] [8
 
 ]
-<uarm.png, id=65, 2165.08875pt x 2098.84125pt>
+<uarm.png, id=137, 2165.08875pt x 2098.84125pt>
 File: uarm.png Graphic file (type png)
 <use uarm.png>
 Package pdftex.def Info: uarm.png  used on input line 89.
@@ -1051,7 +1047,7 @@ Overfull \vbox (3.26768pt too high) detected at line 89
 \openout4 = `presentation.vrb'.
 
  (./presentation.vrb
-<pc.png, id=72, 301.125pt x 301.125pt>
+<pc.png, id=144, 301.125pt x 301.125pt>
 File: pc.png Graphic file (type png)
 <use pc.png>
 Package pdftex.def Info: pc.png  used on input line 8.
@@ -1071,7 +1067,7 @@ Package pdftex.def Info: pc.png  used on input line 8.
 ] [14
 
 ]
-<hardware.png, id=103, 1044.90375pt x 761.84625pt>
+<hardware.png, id=172, 1044.90375pt x 761.84625pt>
 File: hardware.png Graphic file (type png)
 <use hardware.png>
 Package pdftex.def Info: hardware.png  used on input line 144.
@@ -1079,24 +1075,23 @@ Package pdftex.def Info: hardware.png  used on input line 144.
  [15
 
  <./hardware.png>]
+<pin.png, id=179, 894.542pt x 503.481pt>
+File: pin.png Graphic file (type png)
+<use pin.png>
+Package pdftex.def Info: pin.png  used on input line 180.
+(pdftex.def)             Requested size: 357.81046pt x 201.38882pt.
 
-LaTeX Warning: File `design2.png' not found on input line 180.
+Overfull \hbox (50.52058pt too wide) in paragraph at lines 180--180
+ [] 
+ []
 
 
-! Package pdftex.def Error: File `design2.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.180 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \vbox (3.3662pt too high) detected at line 180
+ []
 
 [16
 
-] [17
+ <./pin.png>] [17
 
 ] [18
 
@@ -1108,18 +1103,18 @@ If that doesn't work, type  X <return>  to quit.
 ]
 \openout4 = `presentation.vrb'.
 
- (./presentation.vrb) [20
+ (./presentation.vrb)
+[20
 
 ]
 \openout4 = `presentation.vrb'.
 
-
-(./presentation.vrb) [21
+ (./presentation.vrb) [21
 
 ] [22
 
 ]
-<deployment_digaram.png, id=159, 1388.71765pt x 430.78589pt>
+<deployment_digaram.png, id=214, 1388.71765pt x 430.78589pt>
 File: deployment_digaram.png Graphic file (type png)
 <use deployment_digaram.png>
 Package pdftex.def Info: deployment_digaram.png  used on input line 238.
@@ -1135,25 +1130,7 @@ Overfull \hbox (12.10847pt too wide) in paragraph at lines 238--238
 
 ] [25
 
-]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 257
-[][]
- []
-
-[26
+] [26
 
 ] [27
 
@@ -1167,42 +1144,35 @@ Underfull \hbox (badness 10000) detected at line 257
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 272.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 272.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 272.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 272.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 274.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
+Package rerunfilecheck Info: File `presentation.out' has not changed.
+(rerunfilecheck)             Checksum: 881F3C12EE8937FD122F1F65559F2AA6;834.
 
-
-Package rerunfilecheck Warning: File `presentation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `presentation.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  881F3C12EE8937FD122F1F65559F2AA6;834.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 21263 strings out of 494880
- 421833 string characters out of 6179600
- 479527 words of memory out of 5000000
- 24058 multiletter control sequences out of 15000+600000
- 11920 words of font info for 44 fonts, out of 8000000 for 9000
+ 21408 strings out of 494880
+ 423088 string characters out of 6179600
+ 480722 words of memory out of 5000000
+ 24195 multiletter control sequences out of 15000+600000
+ 11752 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 64i,11n,89p,1795b,694s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,11n,89p,1839b,695s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on presentation.pdf (27 pages, 967941 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on presentation.pdf (27 pages, 1304583 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
+ 277 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  68 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 
