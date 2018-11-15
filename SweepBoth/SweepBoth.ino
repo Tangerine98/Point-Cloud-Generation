@@ -1,7 +1,7 @@
 #include<Servo.h>
 
 Servo servo_base;
-Servo servo_1;
+Servo servo_link;
 
 #define TURN_TIME 185     //Variation from calculated value : Trial and error of time_delay
 //turn_time = (0.23 - 0.19) *(5-4.8)/(4.8 - 6.0) + 0.23 = 0.22333sec 0.23 is speed at 4.8V and 0.19 is speed at 6.0V
@@ -9,7 +9,7 @@ Servo servo_1;
 int time_delay;
 int angle = 5;
 int finalAngle =5;
-int servo1_angle=10;
+int pos = 0;    // variable to store the servo position
 
 // defines pins numbers
 const int trigPin = 5;
@@ -21,49 +21,42 @@ float distance;
 
 void setup() {
   servo_base.attach(9);
-  servo_base.write(0);
-  servo_1.attach(10);
-  servo_1.write(0);
+  //servo_base.write(0);
+  servo_link.attach(11);
+  servo_link.write(0);
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
   Serial.begin(9600); // Starts the serial communication
   time_delay = (TURN_TIME *(angle*0.01746031746));  // 0.017.. is 22/(7*180) converting phi to rad and multiplying with turn time
 }
 
-void loop() {file:///usr/share/applications/arduino-arduinoide.desktop
-      //Serial.print(time_delay);
-  
-      //Move Clockwise
-      while (finalAngle <= 430) {    //this makes it to rotate 360
-        servo_base.writeMicroseconds(1000);
-        //Serial.print("before delay");
-        delay(200);
-        servo_base.writeMicroseconds(1500);
-        for(servo1_angle = 0; servo1_angle <= 180; servo1_angle = servo1_angle+10){
-          servo_1.write(servo1_angle);
-          //Serial.print("going to 180 ");
-          //Serial.print(servo1_angle);
-          // Serial.print("\n");
-          //delay(2000);
-        }
-        delay(2000);
-        for(servo1_angle = 180; servo1_angle >= 0; servo1_angle = servo1_angle-10){
-          servo_1.write(servo1_angle);
-          // Serial.print("going to 0 ");
-          //Serial.print(servo1_angle);
-          // Serial.print("\n");
-          //delay(900);
-        }
+void loop() {
+  //Move Clockwise
+  while (finalAngle <= 360) {    //this makes it to rotate 360
+    servo_base.writeMicroseconds(1000);
+    delay(200);
+    servo_base.writeMicroseconds(1500);
+    delay(500);
+    for (pos = 0; pos <= 180; pos += 10) { // goes from 0 degrees to 180 degrees
+      // in steps of 1 degree
+      servo_link.write(pos); 
+      //findDistance();             // tell servo to go to position in variable 'pos'
+      Serial.println(pos);
+      delay(150);                       // waits 15ms for the servo to reach the position
+    }
+    
+    for (pos = 180; pos >= 0; pos -= 10) 
+    { // goes from 180 degrees to 0 degrees
+      servo_link.write(pos);
+      //findDistance();              // tell servo to go to position in variable 'pos'
+      Serial.println(pos);
+      delay(150);                       // waits 15ms for the servo to reach the position
+    }
         
-        //delay(time_delay-75);  //8
-        // Serial.print("after delay");
-       
-        //findDistance();
-        finalAngle = finalAngle + 5;
-        Serial.println(finalAngle);
-        //Serial.print("\n");
-        delay(1000);
-      }
+    finalAngle = finalAngle + 5;
+    Serial.println(finalAngle);
+    delay(1000);
+  }
 }
 
 void findDistance(){
