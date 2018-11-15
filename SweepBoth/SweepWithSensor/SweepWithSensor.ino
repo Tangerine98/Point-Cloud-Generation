@@ -40,13 +40,16 @@ void loop() {
       while (finalAngle <= 35) {    //this makes it to rotate 360
         servo_base.writeMicroseconds(1000);
         delay(200);
-        servo_base.writeMicroseconds(1500);
-        delay(1000);
-        for(servo1_angle = 0; servo1_angle <= 180; servo1_angle = servo1_angle+10){
+        Serial.println("Before Stop");
+        //servo_base.writeMicroseconds(1500);
+        servo_base.write(90);
+        delay(500);
+        Serial.println("After Stop");
+        for(servo1_angle = 0; servo1_angle <= 170; servo1_angle = servo1_angle+10){
           servo_1.write(servo1_angle);
         }
         delay(2000);
-        for(servo1_angle = 180; servo1_angle >= 0; servo1_angle = servo1_angle-10){
+        for(servo1_angle = 170; servo1_angle >= 0; servo1_angle = servo1_angle-10){
           servo_1.write(servo1_angle);
         }
         delay(1000);
