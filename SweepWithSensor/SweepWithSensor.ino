@@ -1,3 +1,4 @@
+
 #include<Servo.h>
 
 Servo servo_base;
@@ -20,48 +21,40 @@ long duration;
 float distance;
 
 void setup() {
+  
   servo_base.attach(9);
-  servo_base.write(0);
   servo_1.attach(10);
+  
   servo_1.write(0);
+  
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
-  Serial.begin(9600); // Starts the serial communication
+  Serial.begin(9600);
+  
   time_delay = (TURN_TIME *(angle*0.01746031746));  // 0.017.. is 22/(7*180) converting phi to rad and multiplying with turn time
 }
 
-void loop() {file:///usr/share/applications/arduino-arduinoide.desktop
-      //Serial.print(time_delay);
+void loop() {
   
       //Move Clockwise
-      while (finalAngle <= 430) {    //this makes it to rotate 360
+      while (finalAngle <= 35) {    //this makes it to rotate 360
         servo_base.writeMicroseconds(1000);
-        //Serial.print("before delay");
         delay(200);
         servo_base.writeMicroseconds(1500);
+        delay(1000);
         for(servo1_angle = 0; servo1_angle <= 180; servo1_angle = servo1_angle+10){
           servo_1.write(servo1_angle);
-          //Serial.print("going to 180 ");
-          //Serial.print(servo1_angle);
-          // Serial.print("\n");
-          //delay(2000);
         }
         delay(2000);
         for(servo1_angle = 180; servo1_angle >= 0; servo1_angle = servo1_angle-10){
           servo_1.write(servo1_angle);
-          // Serial.print("going to 0 ");
-          //Serial.print(servo1_angle);
-          // Serial.print("\n");
-          //delay(900);
         }
-        
+        delay(1000);
         //delay(time_delay-75);  //8
-        // Serial.print("after delay");
        
         //findDistance();
         finalAngle = finalAngle + 5;
         Serial.println(finalAngle);
-        //Serial.print("\n");
         delay(1000);
       }
 }
