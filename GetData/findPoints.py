@@ -3,13 +3,17 @@ import serial.tools.list_ports
 
 def get_arduino_port():
     ports_list = list(serial.tools.list_ports.comports())
-    for p in ports_list:
-        device = str(p.description)
-        if "ACM" in device:
-            p1 = "/dev/" + device
-            return p1
-        else:
-            print("Arduino not found")
+    if ports_list:
+        for p in ports_list:
+            device = str(p.description) 
+            if "ACM" in device:
+                arduino_port = "/dev/" + device
+                return arduino_port
+            else:
+                print("Arduino not found.\n")
+    else:
+        print("no device not found.\n")
+
         
         
 
