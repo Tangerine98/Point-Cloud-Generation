@@ -38,10 +38,10 @@ void setup() {
 
 void loop() {
   
-      while (finalAngle <= 35) {    //this makes it to rotate 360
+      while (finalAngle <= 35) {    //this makes it to rotate 360 found by trial and error
         servo_base.writeMicroseconds(1000);
         delay(200);
-        //servo_base.writeMicroseconds(1500);
+        //servo_base.writeMicroseconds(1500); //not working. But why??
         servo_base.write(90);
         delay(500);
 
@@ -66,7 +66,6 @@ void loop() {
        
         //findDistance();
         finalAngle = finalAngle + 5;
-        //Serial.println(finalAngle);
         delay(1000);
       }    
 }
