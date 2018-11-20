@@ -90,5 +90,7 @@ void findDistance(){
     distance= duration*0.034/2;
     
     String distance_string = String(distance);
+    delay(500);
     Serial.println(distance_string + "," + servo_base_str + "," +servo1_angle_str);
+    delay(1000);
 }

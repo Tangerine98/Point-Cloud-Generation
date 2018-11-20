@@ -26,10 +26,11 @@ def find_position(distance,phi,theta):
 
 def data_parser(raw_data):
     parameters = raw_data.split(',')
+    print(parameters)
     dist = float(parameters[0])
     phi = float(parameters[1])
     theta = float(parameters[2])
-    #print("distance:" + str(dist) + " phi:" + str(phi) + " theta:" + str(theta))
+    print("distance:" + str(dist) + " phi:" + str(phi) + " theta:" + str(theta) + "\n")
     return dist,phi,theta
     
 
@@ -75,6 +76,7 @@ if __name__ == "__main__":
             ser.flushInput()
             #while ser.in_waiting :
             raw_distance = ser.readline()
+            #raw_distance = ser.read(10)
             distance,phi,theta = data_parser(raw_distance.decode())
             #distance = float(raw_distance.decode())
             #print(distance)
