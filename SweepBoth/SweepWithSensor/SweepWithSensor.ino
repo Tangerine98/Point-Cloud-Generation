@@ -38,34 +38,35 @@ void setup() {
 
 void loop() {
   
-      while (finalAngle <= 35) {    //this makes it to rotate 360 found by trial and error
+      while (finalAngle <= 110) {    //this makes it to rotate 360 found by trial and error
         servo_base.writeMicroseconds(1000);
-        delay(200);
+        delay(100);
         //servo_base.writeMicroseconds(1500); //not working. But why??
         servo_base.write(90);
         delay(500);
 
-        for(servo1_angle = 0; servo1_angle <= 180; servo1_angle = servo1_angle+10){
+        for(servo1_angle = 0; servo1_angle <= 155; servo1_angle = servo1_angle+5){
           servo_1.write(servo1_angle);
-          delay(1000);
+          delay(500);
           servo1_angle_str = String(servo1_angle);
           servo_base_str = String(finalAngle);
           findDistance();
         }
-        delay(2000);
+        delay(600);
     
-        for(servo1_angle = 180; servo1_angle >= 0; servo1_angle = servo1_angle-10){
+        for(servo1_angle = 155; servo1_angle >= 0; servo1_angle = servo1_angle-5){
           servo_1.write(servo1_angle);
-          delay(1000);
+          delay(500);
           servo1_angle_str = String(servo1_angle);
           servo_base_str = String(finalAngle);
          findDistance();
         }
-        delay(1000);
+        delay(500);
         //delay(time_delay-75);  //8
        
         //findDistance();
         finalAngle = finalAngle + 5;
+        //Serial.println(finalAngle);
         delay(1000);
       }    
 }
@@ -90,7 +91,7 @@ void findDistance(){
     distance= duration*0.034/2;
     
     String distance_string = String(distance);
-    delay(500);
+    delay(200);
     Serial.println(distance_string + "," + servo_base_str + "," +servo1_angle_str);
     delay(1000);
 }
