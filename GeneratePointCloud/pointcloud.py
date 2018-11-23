@@ -44,6 +44,8 @@ def load_data(filename,pointCloud):
      
     for k in range(size(data,0)):
         point = data[k] #20*(random.rand(3)-0.5)
+        print(point)
+        print(type(point))
         pointCloud.addPoint(point)
          
     return pointCloud
