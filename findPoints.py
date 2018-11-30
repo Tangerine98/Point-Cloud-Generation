@@ -1,7 +1,6 @@
 import serial
 import numpy
 import time
-import os
 import serial.tools.list_ports
 
 
@@ -51,24 +50,14 @@ if __name__ == "__main__":
     zero_value_points = 0
     maxrange_value_points = 0
     no_of_points = 0
-    pcd_file = "points"
 
     port = get_arduino_port()
     print("Arduino found in " + port)
     print("connecting")
     ser = serial.Serial(port, 9600)
 
-    # to check if file exist if it does add numbering to file
-    if(os.path.isfile(pcd_file+".pcd")):
-        pcdfile = pcd_file
-        for i in range(1, 100):
-            if(os.path.isfile(pcdfile+".pcd")):
-                pcdfile = pcd_file+"_"+str(i)+".pcd"
-            else:
-                break
-
     # open file and initilize pcd values
-    f = open(pcdfile, "w")
+    f = open("points.pcd", "w")
     f.write("# .PCD v0.7 - Point Cloud Data file format\n")
     f.write("VERSION 0.7\n")
     f.write("FIELDS x y z\n")
@@ -105,6 +94,3 @@ if __name__ == "__main__":
             print("total no of points:" + str(no_of_points)+"\n")
 
     f.close()
-    print("PCD file generated")
-    print("Ratio(zero/total):" + str(zero_value_points/no_of_points))
-    print("Ratio(maxvalue/total):" + str(maxrange_value_points/no_of_points))
