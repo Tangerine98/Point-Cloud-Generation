@@ -1,5 +1,5 @@
 # Point Cloud Generation
-This project uses a arduino and python(3.x) to generate a PCD file from the arduino and visualize it in VTK.
+This project uses Arduino and python(3.x) to generate a PCD file from the arduino and visualize it in VTK.
 This is done in 2 steps
 1. Creating the PCD file by getting data from the Arduino
 2. Visualize the PCD file
@@ -16,7 +16,11 @@ apt install python3 python3-pip
 ```
 ### Arch based systems
 ```
-pacman -S pyhton pyhton-pip
+pacman -S python python-pip
+```
+### SUSE Linux based systems
+```
+zypper install python3 python3-pip
 ```
 ## Installing
 External packages used in the python program are: `Numpy`,`VTK`,`PySerial`
@@ -30,8 +34,12 @@ pip3 install -r requirements.txt
 ```
 pip install -r requirements.txt
 ```
+### SUSE Linux based systems
+```
+pip3 install -r requirements.txt
+```
 
-## How to use this project?
+## How to run this project?
 
 ### Arduino code
 The arduino code is located in the `./SweepBoth` folder. Flash `SweepBoth.ino` located in that file to the Arduino
