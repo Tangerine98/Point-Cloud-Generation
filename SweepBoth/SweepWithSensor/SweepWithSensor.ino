@@ -14,7 +14,6 @@ const int echoPin = 6;
 const int base_pin = 9;
 const int servo1_pin = 10;
 
-
 // defines variables
 long duration;
 float distance;
