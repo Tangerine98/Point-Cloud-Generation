@@ -46,17 +46,15 @@ The arduino code is located in the `./SweepBoth` folder. Flash `SweepBoth.ino` l
 
 ### Gnerating the PCD 
 
-Connect your arduino and then run the following commands
+Connect your arduino and then run the following command
 ```
-cd GetData
 python findpoints.py
 ```
 
 ### Visualize the PCD file
 
-Copy the Generated points.pcd into `./GeneratePointCloud` and run
+Run the following command after the pcd file has been generated
 ```
-cd GeneratePointCloud
 python pointscloud.py points.pcd
 ```
 
