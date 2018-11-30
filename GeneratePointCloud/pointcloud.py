@@ -37,6 +37,7 @@ class VtkPointCloud:
         self.vtkPolyData.SetVerts(self.vtkCells)
         self.vtkPolyData.GetPointData().SetScalars(self.vtkDepth)
         self.vtkPolyData.GetPointData().SetActiveScalars('DepthArray')
+<<<<<<< HEAD
 
 
 def load_data(filename, pointCloud):
@@ -44,6 +45,16 @@ def load_data(filename, pointCloud):
 
     for k in range(size(data, 0)):
         point = data[k]  # 20*(random.rand(3)-0.5)
+=======
+ 
+def load_data(filename,pointCloud):
+    data = genfromtxt(filename,dtype=float,skip_header=11,usecols=[0,1,2])
+     
+    for k in range(size(data,0)):
+        point = data[k] #20*(random.rand(3)-0.5)
+        print(point)
+        print(type(point))
+>>>>>>> 614746d380015f95f0e753eb885749dda160900a
         pointCloud.addPoint(point)
 
     return pointCloud
