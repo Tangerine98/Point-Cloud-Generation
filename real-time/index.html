@@ -19,55 +19,12 @@
       <pre id="file-content"></pre>
 		<script src="js/three.min.js"></script>
 		<script>
-      
-      /*
-      var reader = new FileReader();
-      reader.onload = function(event) {
-        var contents = event.target.result;
-        console.log("File contents: " + contents);
-      };
-
-      reader.onerror = function(event) {
-        console.error("File could not be read! Code " + event.target.error.code);
-      };
-
-      reader.readAsText(file);
-      */
-      function readSingleFile(e) {
-        console.log("e: ",e);
-        var file = e.target.files[0];
-        if (!file) {
-          return;
-        }
-        var reader = new FileReader();
-        reader.onload = function(e) {
-          var contents = e.target.result;
-          var array = contents.split("\n");
-          console.log(array, array.length);
-          for (var i=0; i<array.length; ++i) {
-            var point = array[i].split(" ")
-            console.log(i,point);
-
-          }
-
-          //displayContents(contents);
-        };
-        reader.readAsText(file);
-      }
-
       document.getElementById('file-input').addEventListener('change', readSingleFile, false);
-      //console.log().addEventListener('change',readSingleFile,false);
-
-
-
 
 			var bgColor = 0xf0f1f2;
-
       var scene = new THREE.Scene();
-
       var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000 );
       camera.position.set(0,0,450);
-
       var renderer = new THREE.WebGLRenderer({
         antialias:true
       });
@@ -90,7 +47,6 @@
       }
 
       function readSingleFile(e) {
-        console.log("e: ",e);
         var file = e.target.files[0];
         if (!file) {
           return;
@@ -118,7 +74,7 @@
         reader.readAsText(file);
       }
       
-      //**Code to zoom in and out on scroll - currently not working **//
+      /**Code to zoom in and out on scroll - currently not working 
       var startX, startY, target = $(renderer.domElement), selected;
 
       function mouseUp(e) {
@@ -177,8 +133,10 @@
       }
       update();
     </script>
+    <!--
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://threejs.org/examples/js/controls/TrackballControls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+    -->
 	</body>
 </html>
